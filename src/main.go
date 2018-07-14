@@ -1,4 +1,4 @@
-package main
+package src
 
 import (
 	"fmt"
@@ -31,8 +31,4 @@ func main() {
 	check(err)
 
 	fmt.Println(samples)
-
-
-
-
 }
