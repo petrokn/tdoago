@@ -6,13 +6,8 @@ import (
 	
 	"github.com/youpy/go-wav"
 	"github.com/youpy/go-riff"
+	"tdoago/src/common"
 )
-
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
 
 func main() {
 	if len(os.Args) != 2 {
@@ -21,14 +16,14 @@ func main() {
 	}
 
 	file, err := os.Open(os.Args[1])
-	check(err)
+	common.Check(err)
 
 	reader := riff.Reader{file}
 
 	dec := wav.NewReader(reader.RIFFReader)
 
 	samples, err := dec.ReadSamples()
-	check(err)
+	common.Check(err)
 
 	fmt.Println(samples)
 }
