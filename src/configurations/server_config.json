@@ -1,4 +1,5 @@
 {
   "server_address" : "",
-  "server_port" : ""
+  "server_port" : "",
+  "localization_trials": 1
 }
