@@ -1,5 +1,5 @@
 package modeling
 
-func GenerateDataForMicrophones()  {
-	
+func GenerateDataForMicrophones() {
+
 }

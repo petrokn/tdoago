@@ -1,0 +1,6 @@
+{
+  "modeling" : true,
+  "log_file": "",
+  "localization_radius": 50,
+  "thread_amount": 2
+}

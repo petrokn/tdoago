@@ -3,9 +3,9 @@ package src
 import (
 	"fmt"
 	"os"
-	
-	"github.com/youpy/go-wav"
+
 	"github.com/youpy/go-riff"
+	"github.com/youpy/go-wav"
 	"tdoago/src/common"
 )
 

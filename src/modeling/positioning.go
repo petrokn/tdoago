@@ -1,5 +1,5 @@
 package modeling
 
-func GeneratePositions(){
+func GeneratePositions() {
 
 }

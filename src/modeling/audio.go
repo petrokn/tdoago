@@ -1,5 +1,5 @@
 package modeling
 
-func ReadDataFromFile(path string){
+func ReadDataFromFile(path *string) {
 
 }

@@ -1,8 +1,8 @@
 package common
 
 import (
-	"os"
 	"log"
+	"os"
 )
 
 func Check(e error) {
@@ -11,8 +11,8 @@ func Check(e error) {
 	}
 }
 
-func InitLogging()  {
-	logFile, err := os.OpenFile("localization_log", os.O_RDWR | os.O_CREATE | os.O_APPEND, 0666)
+func InitLogging() {
+	logFile, err := os.OpenFile("localization_log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("Error opening file: %v", err)
 	}
