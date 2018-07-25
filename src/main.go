@@ -14,7 +14,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Usage: <file.wav>\n")
 		os.Exit(1)
 	}
-	
+
 	file, err := os.Open(os.Args[1])
 	common.Check(err)
 

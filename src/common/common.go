@@ -16,6 +16,7 @@ func InitLogging()  {
 	if err != nil {
 		log.Fatalf("Error opening file: %v", err)
 	}
+
 	defer logFile.Close()
 
 	log.SetOutput(logFile)
