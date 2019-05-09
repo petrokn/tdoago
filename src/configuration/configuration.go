@@ -1,15 +1,15 @@
 package configuration
 
 import (
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"log"
 )
 
 type Config struct {
-	CoreConfiguration CoreConfiguration
-	ServerConfiguration ServerConfiguration
-	ClientConfiguration CoreConfiguration
+	CoreConfiguration   CoreConfiguration   `yaml:"core"`
+	ServerConfiguration ServerConfiguration `yaml:"server"`
+	ClientConfiguration CoreConfiguration   `yaml:"client"`
 }
 
 type CoreConfiguration struct {
@@ -39,6 +39,7 @@ func Configure(path string) {
 	var config *Config
 
 	err = yaml.Unmarshal(yamlFile, &config)
+	log.Println(config)
 	if err != nil {
 		log.Fatalf("Unmarshal: %v", err)
 	}
