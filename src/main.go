@@ -19,7 +19,7 @@ func main() {
 	file, err := os.Open(os.Args[1])
 	common.Check(err)
 
-	configuration.Configure("src/configuration/config.yaml")
+	configuration.Configure("config.yaml")
 
 	reader := riff.Reader{file}
 
