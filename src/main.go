@@ -1,8 +1,9 @@
-package src
+package main
 
 import (
 	"fmt"
 	"os"
+	"tdoago/src/configuration"
 
 	"github.com/youpy/go-riff"
 	"github.com/youpy/go-wav"
@@ -17,6 +18,8 @@ func main() {
 
 	file, err := os.Open(os.Args[1])
 	common.Check(err)
+
+	configuration.Configure("src/configuration/config.yaml")
 
 	reader := riff.Reader{file}
 

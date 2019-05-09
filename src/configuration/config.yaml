@@ -1,0 +1,15 @@
+
+client:
+  audio_path: "",
+  proxies_amount: 5
+
+core:
+  modeling: true,
+  log_file: "",
+  localization_radius: 50,
+  thread_amount: 2
+
+server:
+  server_address: "",
+  server_port: "",
+  localization_trials: 1
