@@ -12,3 +12,6 @@ server:
 client:
   audio_path:
   proxies_amount: 5
+
+messaging:
+  hosts:

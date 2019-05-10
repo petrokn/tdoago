@@ -10,6 +10,7 @@ type Config struct {
 	CoreConfiguration   CoreConfiguration   `yaml:"core"`
 	ServerConfiguration ServerConfiguration `yaml:"server"`
 	ClientConfiguration CoreConfiguration   `yaml:"client"`
+	Messaging Messaging   `yaml:"messaging"`
 }
 
 type CoreConfiguration struct {
@@ -30,10 +31,14 @@ type ClientConfiguration struct {
 	ProxiesAmount int    `yaml:"proxies_amount"`
 }
 
+type Messaging struct {
+	Hosts string `yaml:"hosts"`
+}
+
 func Configure(path string) {
 	yamlFile, err := ioutil.ReadFile(path)
 	if err != nil {
-		log.Printf("yamlFile.Get err   #%v ", err)
+		log.Printf("Error %v ", err)
 	}
 
 	var config *Config
@@ -41,6 +46,6 @@ func Configure(path string) {
 	err = yaml.Unmarshal(yamlFile, &config)
 	log.Println(config)
 	if err != nil {
-		log.Fatalf("Unmarshal: %v", err)
+		log.Fatalf("Unmarshal %v", err)
 	}
 }

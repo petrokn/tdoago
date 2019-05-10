@@ -1,7 +1,6 @@
 package modeling
 
 type Orchestrator interface {
-
 }
 
-type DefaultOrchestrator struct {}
+type DefaultOrchestrator struct{}

@@ -6,7 +6,7 @@ type DataGenerator interface {
 	GenerateMicrophonePositions()
 }
 
-type BaseGenerator struct {}
+type BaseGenerator struct{}
 
 func (bs *BaseGenerator) GenerateMicrophoneData() {
 
