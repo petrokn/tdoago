@@ -1,5 +1,11 @@
 package modeling
 
-func ReadDataFromFile(path *string) {
+type AudioFileReader interface {
+	ReadDataFromFile(path *string)
+}
+
+type BaseAudioFileReader struct {}
+
+func (br *BaseAudioFileReader) ReadDataFromFile(path *string) {
 
 }

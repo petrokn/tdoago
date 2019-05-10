@@ -9,7 +9,3 @@ type MicrophoneProxy struct{}
 func (mp *MicrophoneProxy) SendData() error {
 	return nil
 }
-
-func GenerateDataForMicrophones() {
-
-}
