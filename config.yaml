@@ -1,6 +1,6 @@
 core:
   modeling: true
-  log_file:
+  log_file: localization_log
   localization_radius: 50
   thread_amount: 2
 

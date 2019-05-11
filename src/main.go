@@ -21,7 +21,9 @@ func main() {
 	file, err := os.Open(os.Args[1])
 	common.Check(err)
 
-	configuration.Configure("config.yaml")
+	config := configuration.Configure("config.yaml")
+
+	common.InitLogging(&config.CoreConfiguration.LogFile)
 
 	startTime := time.Now()
 
