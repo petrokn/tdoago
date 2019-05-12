@@ -12,7 +12,7 @@ func Check(e error) {
 }
 
 func InitLogging(filename *string) {
-	logFile, err := os.OpenFile("localization_log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	logFile, err := os.OpenFile(*filename, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("Error opening file: %v", err)
 	}
